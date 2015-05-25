@@ -152,7 +152,7 @@
 									<host>localhost</host>
 									<server>shipping-server</server>
 									<virtualHost>default_host</virtualHost>
-									<script>websphere.py</script>
+									<script>myscript.py</script>
 									<verbose>true</verbose>
 								</configuration>
 							</execution>
