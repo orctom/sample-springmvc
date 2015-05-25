@@ -122,37 +122,39 @@
 		</dependency>
 	</dependencies>
 
-	<!-- deploy the ear to WebSphere Application Server, only applicable for WWW/BSD -->
-	<profile>
-		<id>was_deploy</id>
-		<activation>
-			<property>
-				<name>was_deploy</name>
-				<value>true</value>
-			</property>
-		</activation>
-		<build>
-			<plugins>
-				<plugin>
-					<groupId>com.orctom.mojo</groupId>
-					<artifactId>was-maven-plugin</artifactId>
-					<version>1.0.10</version>
-					<executions>
-						<execution>
-							<id>deploy</id>
-							<phase>install</phase>
-							<goals>
-								<goal>deploy</goal>
-							</goals>
-							<configuration>
-								<wasHome>${env.WAS_HOME}</wasHome>
-								<verbose>true</verbose>
-								<script>websphere.py</script>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
-			</plugins>
-		</build>
-	</profile>
+	<profiles>
+		<!-- deploy the ear to WebSphere Application Server, only applicable for WWW/BSD -->
+		<profile>
+			<id>was_deploy</id>
+			<activation>
+				<property>
+					<name>was_deploy</name>
+					<value>true</value>
+				</property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.orctom.mojo</groupId>
+						<artifactId>was-maven-plugin</artifactId>
+						<version>1.0.10</version>
+						<executions>
+							<execution>
+								<id>deploy</id>
+								<phase>install</phase>
+								<goals>
+									<goal>deploy</goal>
+								</goals>
+								<configuration>
+									<wasHome>${env.WAS_HOME}</wasHome>
+									<verbose>true</verbose>
+									<script>websphere.py</script>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
