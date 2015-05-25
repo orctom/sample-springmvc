@@ -1,0 +1,11 @@
+doctype html
+html
+	include header
+	body
+		.container
+			block content
+		script(src='#{contextPath}/theme/js/jquery/jquery-1.11.0.min.js')
+		script(src='#{contextPath}/theme/js/bootstrap/bootstrap.min.js')
+		script(src='#{contextPath}/theme/js/jquery/jquery.metisMenu.js')
+		script(src='#{contextPath}/theme/js/catalog/workbench.js')
+		block scripts

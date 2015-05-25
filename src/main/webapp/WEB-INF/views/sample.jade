@@ -1,0 +1,18 @@
+extends layout/layout
+block content
+	.row.page-title-wrapper
+		h3.page-header Sample
+	.row
+		.col-xs-12
+			| sample
+	.row
+		.col-xs-12
+			a(href="/")
+				| Index
+	.row
+		.col-xs-12
+			ul
+				if iterable
+					for str, i in iterable
+						li
+							#{str}

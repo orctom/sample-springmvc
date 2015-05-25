@@ -1,0 +1,35 @@
+.navbar-header
+	button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
+		span.sr-only Toggle navigation
+		span.iron-bar
+		span.iron-bar
+		span.iron-bar
+	a.navbar-brand(href="#{contextPath}") Sample site
+#navbar.navbar-collapse.collapse
+	ul.nav.navbar-nav
+		li
+			a(href="#{contextPath}") menu 1
+		li
+			a(href="#{contextPath}") menu 2
+	ul.nav.navbar-nav.navbar-right
+		li.dropdown
+			a(class="dropdown-toggle", data-toggle="dropdown", href="#")
+				i.fa.fa-gears.fa-fw
+				if user
+					|&nbsp;#{user.name}
+				else
+					|&nbsp;
+				i.fa.fa-caret-down
+			ul.dropdown-menu.dropdown-user
+				li
+					a
+						i.fa.fa-sign-out
+						| &nbsp; Logout
+				li
+					a
+						i.fa.fa-sign-in
+						| &nbsp; Login
+				li
+					a
+						i.fa.fa-dashboard
+						| &nbsp; Create Account
