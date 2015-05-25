@@ -35,8 +35,8 @@
 					<fork>true</fork>
 					<compilerVersion>1.8</compilerVersion>
 					<optimize>true</optimize>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 			<plugin>
