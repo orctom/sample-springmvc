@@ -153,6 +153,7 @@
 									<server>shipping-server</server>
 									<virtualHost>default_host</virtualHost>
 									<script>myscript.py</script>
+									<failOnError>false</failOnError>
 									<verbose>true</verbose>
 								</configuration>
 							</execution>
