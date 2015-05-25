@@ -148,7 +148,12 @@
 								<configuration>
 									<wasHome>${env.WAS_HOME}</wasHome>
 									<verbose>true</verbose>
+									<cluster>shipping-cluster</cluster>
+									<host>localhost</host>
+									<server>shipping-server</server>
+									<virtualHost>default_host</virtualHost>
 									<script>websphere.py</script>
+									<verbose>true</verbose>
 								</configuration>
 							</execution>
 						</executions>
