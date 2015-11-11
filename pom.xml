@@ -147,13 +147,13 @@
 								</goals>
 								<configuration>
 									<wasHome>${env.WAS_HOME}</wasHome>
-                                    <cluster>3rddevtrunk-cluster</cluster>
-                                    <host>localhost</host>
-                                    <virtualHost>svcdevtrunk-vhost</virtualHost>
-                                    <!--script>myscript.py</script-->
-                                    <contextRoot>sample</contextRoot>
-                                    <failOnError>true</failOnError>
-                                    <verbose>true</verbose>
+									<cluster>3rddevtrunk-cluster</cluster>
+									<host>localhost</host>
+									<virtualHost>svcdevtrunk-vhost</virtualHost>
+									<!--script>myscript.py</script-->
+									<contextRoot>sample</contextRoot>
+									<failOnError>true</failOnError>
+									<verbose>true</verbose>
 									<webservers>chvsvcdevcmb01</webservers>
 									<deployOptions>-deployws</deployOptions>
 								</configuration>
