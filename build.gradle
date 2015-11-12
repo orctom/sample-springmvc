@@ -1,12 +1,10 @@
-import com.orctom.gradle.plugins.was.WASDeployTask
-
 buildscript {
     repositories {
         mavenLocal()
-        mavenCentral()
+        //mavenCentral()
     }
     dependencies {
-        classpath 'com.orctom.gradle.plugins.was:was-gradle-plugin:1.0-SNAPSHOT'
+        classpath 'com.orctom.gradle.was:was-gradle-plugin:1.0-SNAPSHOT'
     }
 }
 
@@ -26,10 +24,9 @@ targetCompatibility = 1.7
 
 repositories {
      mavenLocal()
-     mavenCentral()
+     //mavenCentral()
 }
 dependencies {
-    compile 'com.orctom.gradle.plugins.was:was-gradle-plugin:1.0-SNAPSHOT'
     compile group: 'org.springframework', name: 'spring-webmvc', version:'4.1.3.RELEASE'
     compile group: 'org.springframework', name: 'spring-context-support', version:'4.1.3.RELEASE'
     compile group: 'org.aspectj', name: 'aspectjrt', version:'1.5.4'
@@ -44,11 +41,11 @@ dependencies {
 }
 
 //was {
-//    cluster = 'test-cluster'
+//    cluster = '3rddevtrunk-cluster'
+//    virtualHost = 'svcdevtrunk-vhost'
+//    contextRoot = 'sample'
+//    failOnError = 'true'
+//    verbose = 'true'
+//    webservers = 'chvsvcdevcmb01, chvsvcdevcmb02'
+//    deployOptions = '-deployws'
 //}
-
-task greeting(type: WASDeployTask) {
-    was {
-        cluster = 'test-cluster'
-    }
-}
