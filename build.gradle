@@ -1,7 +1,7 @@
 buildscript {
     repositories {
         mavenLocal()
-        //mavenCentral()
+        mavenCentral()
     }
     dependencies {
         classpath 'com.orctom.gradle.was:was-gradle-plugin:1.0-SNAPSHOT'
@@ -24,7 +24,7 @@ targetCompatibility = 1.7
 
 repositories {
      mavenLocal()
-     //mavenCentral()
+     mavenCentral()
 }
 dependencies {
     compile group: 'org.springframework', name: 'spring-webmvc', version:'4.1.3.RELEASE'
