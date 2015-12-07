@@ -4,7 +4,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.orctom.gradle.was:was-gradle-plugin:1.0-SNAPSHOT'
+        classpath 'com.orctom.gradle.was:was-gradle-plugin:1.1.1'
     }
 }
 
