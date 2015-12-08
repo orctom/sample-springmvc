@@ -58,7 +58,7 @@ tasks.build.doLast() {
         delete packagesFolder
     }
     def timestamp = new Date().format("yyyy.MM.dd HH:mm:ss z", TimeZone.getTimeZone("America/New_York")).replaceAll("[\\W]", "_")
-    def packageName = "${project.name}_${timestamp}.war"
+    def packageName = "${rootProject.name}_${timestamp}.war"
     copy {
         from(war.archivePath) {
             rename { packageName }
