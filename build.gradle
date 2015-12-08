@@ -66,3 +66,18 @@ tasks.build.doLast() {
         into packagesFolder
     }
 }
+
+void setTimestamp() {
+    def timestamp = System.getProperty('BUILD_TIMESTAMP')
+    if (!timestamp?.trim()) {
+        Date date = new Date()
+        TimeZone timeZone = TimeZone.getTimeZone("America/New_York")
+        timestamp = date.format('yyyy.MM.dd HH:mm:ss z', timeZone)
+        def timestampPath = timestamp.replaceAll('[\\W]', '_')
+        System.setProperty('BUILD_TIMESTAMP', timestamp)
+        System.setProperty('BUILD_TIMESTAMP_PATH', timestampPath)
+        println 'timestamp: ' + timestamp
+    }
+}
+
+setTimestamp()
