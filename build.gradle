@@ -50,3 +50,19 @@ dependencies {
 //    webservers = 'chvsvcdevcmb01, chvsvcdevcmb02'
 //    deployOptions = '-deployws'
 //}
+
+tasks.build.doLast() {
+    println 'prepare packages'
+    def packagesFolder = new File("${project.buildDir}/packages")
+    if (packagesFolder.exists()) {
+        delete packagesFolder
+    }
+    def timestamp = new Date().format("yyyy.MM.dd HH:mm:ss z", TimeZone.getTimeZone("America/New_York")).replaceAll("[\\W]", "_")
+    def packageName = "${project.name}_${timestamp}.war"
+    copy {
+        from(war.archivePath) {
+            rename { packageName }
+        }
+        into packagesFolder
+    }
+}
