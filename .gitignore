@@ -26,3 +26,4 @@
 target/
 build/
 bin/
+/.apt_generated/
