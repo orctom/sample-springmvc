@@ -9,7 +9,7 @@
 *versionsBackup
 */*versionsBackup
 */.externalToolBuilders/
-
+.factorypath
 */.settings/
 */.idea/
 */.gradle/
