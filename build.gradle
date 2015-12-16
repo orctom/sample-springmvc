@@ -6,8 +6,8 @@ buildscript {
         }
     }
     dependencies {
-        classpath "com.orctom.gradle.was:was-gradle-plugin:1.1.3-SNAPSHOT"
-//        classpath "gradle.plugin.com.orctom.gradle.was:was-gradle-plugin:1.1.2"
+//        classpath "com.orctom.gradle.was:was-gradle-plugin:1.1.3-SNAPSHOT"
+        classpath "gradle.plugin.com.orctom.gradle.was:was-gradle-plugin:1.1.2"
     }
 }
 
